@@ -48,7 +48,7 @@ def handle_message(event):
         r = '收到！沒問題！'
     elif msg == '3':
         r = '請撥打 0912345678'
-    elif msg in ['點', '晚上', '早上', '/']:
+    elif msg in ['點', '晚上', '早上', ':']:
         r = '收到！沒問題！'
 
     line_bot_api.reply_message(
