@@ -41,13 +41,15 @@ def handle_message(event):
     r = '抱歉，這個問題不在我的守備範圍！'
 
     if msg in ['hi','Hi']:
-        r = 'Hello, 我是機器人Surya！'
-    elif msg == '你吃飯了嗎？':
-        r = '還沒'
-    elif '訂位' in msg:
-        r = '您想訂位，是嗎？'
-    elif msg in ['Yes', '是']:
+        r = 'Hello, 我是機器人Surya！訂位，請回 1; 取消訂位請回 2; 轉接專人請回 3'
+    elif msg == '1':
         r = '您想訂什麼時間？'
+    elif msg == '2':
+        r = '收到！沒問題！'
+    elif msg == '3':
+        r = '請撥打 0912345678'
+    elif msg in ['點', '晚上', '早上', '/']:
+        r = '收到！沒問題！'
 
     line_bot_api.reply_message(
         event.reply_token,
