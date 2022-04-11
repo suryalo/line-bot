@@ -42,13 +42,13 @@ def handle_message(event):
 
     if '貼圖' in msg:
         sticker_message = StickerSendMessage(
-            package_id='1',
-            sticker_id='1'
+            package_id='2',
+            sticker_id='26'
         )
 
         line_bot_api.reply_message(
-        event.reply_token,
-        sticker_message)
+            event.reply_token,
+            sticker_message)
         return
 
     if msg in ['hi','Hi']:
